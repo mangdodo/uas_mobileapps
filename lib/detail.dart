@@ -20,7 +20,7 @@ class _DetailState extends State<Detail> {
   void confirm() {
     AlertDialog alertDialog = new AlertDialog(
       content: new Text(
-          "Are You sure want to delete '${widget.list[widget.index]['item_name']}'"),
+          "Are You sure want to delete '${widget.list[widget.index]['nama_barang']}'"),
       actions: <Widget>[
         // ignore: deprecated_member_use
         new RaisedButton(
@@ -52,7 +52,7 @@ class _DetailState extends State<Detail> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-          title: new Text("${widget.list[widget.index]['item_name']}")),
+          title: new Text("${widget.list[widget.index]['nama_barang']}")),
       body: new Container(
         height: 270.0,
         padding: const EdgeInsets.all(20.0),
@@ -64,11 +64,11 @@ class _DetailState extends State<Detail> {
                   padding: const EdgeInsets.only(top: 30.0),
                 ),
                 new Text(
-                  widget.list[widget.index]['item_name'],
+                  widget.list[widget.index]['nama_barang'],
                   style: new TextStyle(fontSize: 20.0),
                 ),
                 new Text(
-                  "Code : ${widget.list[widget.index]['item_code']}",
+                  "Code : ${widget.list[widget.index]['stok']}",
                   style: new TextStyle(fontSize: 18.0),
                 ),
                 new Text(
@@ -76,7 +76,7 @@ class _DetailState extends State<Detail> {
                   style: new TextStyle(fontSize: 18.0),
                 ),
                 new Text(
-                  "Stock : ${widget.list[widget.index]['stock']}",
+                  "Stock : ${widget.list[widget.index]['jenis_barang']}",
                   style: new TextStyle(fontSize: 18.0),
                 ),
                 new Padding(

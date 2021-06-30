@@ -21,23 +21,23 @@ class _EditDataState extends State<EditData> {
   void editData() {
     http.post(Uri.parse("http://10.0.2.2/my_store/deletedata.php"), body: {
       "id": widget.list[widget.index]['id'],
-      "itemcode": controllerCode.text,
-      "itemname": controllerName.text,
+      "nama_barang": controllerCode.text,
+      "stok": controllerName.text,
       "price": controllerPrice.text,
-      "stock": controllerStock.text
+      "jenis_barang": controllerStock.text
     });
   }
 
   @override
   void initState() {
     controllerCode =
-        new TextEditingController(text: widget.list[widget.index]['item_code']);
+        new TextEditingController(text: widget.list[widget.index]['nama_barang']);
     controllerName =
-        new TextEditingController(text: widget.list[widget.index]['item_name']);
+        new TextEditingController(text: widget.list[widget.index]['stok']);
     controllerPrice =
         new TextEditingController(text: widget.list[widget.index]['price']);
     controllerStock =
-        new TextEditingController(text: widget.list[widget.index]['stock']);
+        new TextEditingController(text: widget.list[widget.index]['jenis_barang']);
     super.initState();
   }
 
@@ -56,12 +56,12 @@ class _EditDataState extends State<EditData> {
                 new TextField(
                   controller: controllerCode,
                   decoration: new InputDecoration(
-                      hintText: "Item Code", labelText: "Item Code"),
+                      hintText: "Nama Barang", labelText: "Nama Barang"),
                 ),
                 new TextField(
                   controller: controllerName,
                   decoration: new InputDecoration(
-                      hintText: "Item Name", labelText: "Item Name"),
+                      hintText: "Stok", labelText: "Stok"),
                 ),
                 new TextField(
                   controller: controllerPrice,
@@ -71,7 +71,7 @@ class _EditDataState extends State<EditData> {
                 new TextField(
                   controller: controllerStock,
                   decoration: new InputDecoration(
-                      hintText: "Stock", labelText: "Stock"),
+                      hintText: "Jenis Barang", labelText: "Jenis Barang"),
                 ),
                 new Padding(
                   padding: const EdgeInsets.all(10.0),

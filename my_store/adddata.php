@@ -1,10 +1,10 @@
 <?php
 	include 'Conn.php';
 
-	$itemcode = $_POST['itemcode'];
-	$itemname = $_POST['itemname'];
+	$namabarang = $_POST['nama_barang'];
+	$stok = $_POST['stok'];
 	$price = $_POST['price'];
-	$stock = $_POST['stock'];
+	$jenisbarang = $_POST['jenis_barang'];
 
-	$connect->query("INSERT INTO tb_item (item_code,item_name,price,stock) VALUES('".$itemcode."','".$itemname."','".$price."','".$stock."')")
+	$connect->query("INSERT INTO tb_barang (nama_barang,stok,price,jenis_barang) VALUES('".$namabarang."','".$stok."','".$price."','".$jenisbarang."')")
 ?>

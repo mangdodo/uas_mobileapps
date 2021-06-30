@@ -14,10 +14,10 @@ class _AddDataState extends State<AddData> {
 
   void addData() {
     http.post(Uri.parse("http://10.0.2.2/my_store/deletedata.php"), body: {
-      "itemcode": controllerCode.text,
-      "itemname": controllerName.text,
+      "nama_barang": controllerCode.text,
+      "stok": controllerName.text,
       "price": controllerPrice.text,
-      "stock": controllerStock.text
+      "jenis_barang": controllerStock.text
     });
   }
 
@@ -36,12 +36,12 @@ class _AddDataState extends State<AddData> {
                 new TextField(
                   controller: controllerCode,
                   decoration: new InputDecoration(
-                      hintText: "Item Code", labelText: "Item Code"),
+                      hintText: "Nama Barang", labelText: "Nama Barang"),
                 ),
                 new TextField(
                   controller: controllerName,
                   decoration: new InputDecoration(
-                      hintText: "Item Name", labelText: "Item Name"),
+                      hintText: "Stok", labelText: "Stok"),
                 ),
                 new TextField(
                   controller: controllerPrice,
@@ -51,7 +51,7 @@ class _AddDataState extends State<AddData> {
                 new TextField(
                   controller: controllerStock,
                   decoration: new InputDecoration(
-                      hintText: "Stock", labelText: "Stock"),
+                      hintText: "Jenis Barang", labelText: "Jenis Barang"),
                 ),
                 new Padding(
                   padding: const EdgeInsets.all(10.0),
